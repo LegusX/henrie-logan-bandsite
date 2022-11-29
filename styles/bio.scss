@@ -1,5 +1,14 @@
 @use "./partials/global";
-body {
-	font-family: Avenir;
-	margin: 0;
+
+//phones
+.header {
+	background-color: $black;
+}
+
+//tablets
+@media only screen and (min-width: 768px) {
+}
+
+//desktops
+@media only screen and (min-width: 1280px) {
 }
