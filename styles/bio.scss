@@ -1,9 +1,6 @@
-@use "./partials/global";
+@import "partials/global";
 
-//phones
-.header {
-	background-color: $black;
-}
+//everything
 
 //tablets
 @media only screen and (min-width: 768px) {

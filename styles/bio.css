@@ -13,17 +13,28 @@
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
   font-weight: 600;
 }
+.header {
+  background-color: #323232;
+  color: white !important;
+}
+
+.header__logo {
+  height: 20px;
+  width: 20em;
+}
+
 html,
 body,
-ul,
-ol {
+ul {
   font-family: Avenir;
   margin: 0;
   padding: 0;
+}
+
+ul {
   list-style: none;
-  color: #323232;
 }
 
 body {
-  margin: 0;
+  color: #323232;
 }/*# sourceMappingURL=bio.css.map */

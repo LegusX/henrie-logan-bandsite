@@ -1,5 +1,4 @@
-$black: #323232;
-$silver: #afafaf;
+@import "variables";
 
 @font-face {
 	font-family: Avenir;
@@ -17,7 +16,16 @@ $silver: #afafaf;
 	font-weight: 600;
 }
 
-//phones
+//everything
+.header {
+	background-color: $black;
+	color: white !important;
+}
+
+.header__logo {
+	height: 20px;
+	width: 20em;
+}
 
 //tablets
 @media only screen and (min-width: 768px) {
@@ -29,11 +37,16 @@ $silver: #afafaf;
 
 html,
 body,
-ul,
-ol {
+ul {
 	font-family: Avenir;
 	margin: 0;
 	padding: 0;
+}
+
+ul {
 	list-style: none;
+}
+
+body {
 	color: $black;
 }
