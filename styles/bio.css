@@ -17,11 +17,13 @@
   background-color: #323232;
   color: white !important;
   text-align: center;
+  padding-top: 24px;
 }
 
 .header__logo {
   height: 20px;
   width: 120px;
+  margin: 0 32px;
 }
 
 .header__links {
@@ -32,7 +34,6 @@
 
 .header__link {
   flex-grow: 1;
-  padding: 8px 0;
   box-sizing: border-box;
   color: #e1e1e1;
 }
@@ -47,6 +48,25 @@
   border-bottom: 4px solid white;
 }
 
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  .header__links {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header__link {
+    flex-grow: 0;
+    margin: 0 24px;
+    padding: 8px 0;
+  }
+}
 html,
 body,
 ul {
