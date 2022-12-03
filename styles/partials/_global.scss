@@ -2,10 +2,13 @@
 @use "mixins" as *;
 @use "fonts";
 
-//everything
-main,
-.footer__container {
-	@include margin;
+.footer {
+	background-color: $black;
+	color: $mercury;
+	overflow: auto;
+	&__container {
+		@include margin;
+	}
 }
 
 .header {

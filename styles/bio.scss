@@ -20,6 +20,7 @@
 }
 
 .about {
+	@include margin;
 	&__container {
 		@include tablet {
 			padding: 0 3rem;
@@ -38,14 +39,43 @@
 		@include comp;
 		width: 100%;
 	}
+
+	&__quote {
+		padding-top: none;
+		font-size: 1rem;
+		line-height: 22px;
+		font-weight: 600;
+
+		@include tablet {
+			font-size: 1.5rem;
+			line-height: 32px;
+		}
+	}
+
+	&__attribution {
+		font-size: 1rem;
+		line-height: 22px;
+		font-weight: 600;
+
+		@include tablet {
+			font-size: 1.2rem;
+			line-height: 32px;
+		}
+	}
 }
 
 .gallery {
+	background-color: $alabaster;
+	width: 100%;
+
 	&__title {
 		@include headline;
+		@include margin;
 	}
 
 	&__container {
+		@include margin;
+
 		display: flex;
 		flex-wrap: wrap;
 		flex: 0 1 30%;

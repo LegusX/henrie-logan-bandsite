@@ -58,19 +58,21 @@ p {
     font-weight: 400;
   }
 }
-main,
+.footer {
+  background-color: #323232;
+  color: #e1e1e1;
+  overflow: auto;
+}
 .footer__container {
   margin: 0 16px;
 }
 @media only screen and (min-width: 768px) {
-  main,
-.footer__container {
+  .footer__container {
     margin: 0 36px;
   }
 }
 @media only screen and (min-width: 1280px) {
-  main,
-.footer__container {
+  .footer__container {
     margin: 0 auto;
     width: 1020px;
   }
@@ -198,6 +200,20 @@ h3 {
   }
 }
 
+.about {
+  margin: 0 16px;
+}
+@media only screen and (min-width: 768px) {
+  .about {
+    margin: 0 36px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .about {
+    margin: 0 auto;
+    width: 1020px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .about__container {
     padding: 0 3rem;
@@ -227,10 +243,38 @@ h3 {
     padding-bottom: 2.25rem;
   }
 }
+.about__quote {
+  padding-top: none;
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .about__quote {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+}
+.about__attribution {
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 768px) {
+  .about__attribution {
+    font-size: 1.2rem;
+    line-height: 32px;
+  }
+}
 
+.gallery {
+  background-color: #fafafa;
+  width: 100%;
+}
 .gallery__title {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+  margin: 0 16px;
 }
 @media only screen and (min-width: 768px) {
   .gallery__title {
@@ -238,11 +282,34 @@ h3 {
     padding-bottom: 2.25rem;
   }
 }
+@media only screen and (min-width: 768px) {
+  .gallery__title {
+    margin: 0 36px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .gallery__title {
+    margin: 0 auto;
+    width: 1020px;
+  }
+}
 .gallery__container {
+  margin: 0 16px;
   display: flex;
   flex-wrap: wrap;
   flex: 0 1 30%;
   justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  .gallery__container {
+    margin: 0 36px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .gallery__container {
+    margin: 0 auto;
+    width: 1020px;
+  }
 }
 .gallery__img {
   padding-bottom: 1rem;
