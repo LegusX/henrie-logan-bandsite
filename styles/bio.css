@@ -132,7 +132,7 @@ p {
 .footer {
   background-color: #323232;
   color: #e1e1e1;
-  overflow: auto;
+  overflow: hidden;
 }
 .footer__container {
   margin: 0 16px;
@@ -165,7 +165,8 @@ p {
   .footer__top::before {
     content: "";
     background-image: url(../../assets/logos/Logo-bandsite.svg);
-    background-size: contain;
+    background-size: auto;
+    background-position-y: top;
     background-repeat: no-repeat;
     width: 120px;
     aspect-ratio: 6;
@@ -191,6 +192,13 @@ p {
   .footer__contacts {
     display: flex;
     justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__contacts::after {
+    content: "";
+    width: 120px;
+    aspect-ratio: 6;
   }
 }
 .footer__contact {
@@ -269,7 +277,7 @@ p {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  aspect-ratio: 2/1.3;
+  aspect-ratio: 2.5/1;
   width: 100%;
   color: white;
   display: flex;
