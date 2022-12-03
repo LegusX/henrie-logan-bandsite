@@ -47,12 +47,26 @@
 
 	&__container {
 		display: flex;
-		flex-flow: row wrap;
-		flex: 0 1 32%;
+		flex-wrap: wrap;
+		flex: 0 1 30%;
+		justify-content: space-between;
 	}
 
 	&__img {
 		@include comp;
+
 		width: 100%;
+
+		@include tablet {
+			padding-bottom: 0;
+			width: 32%;
+			margin-bottom: 2%;
+
+			//Only apply brightness animation on tablet+ because hover doesn't work without a cursor of some sort, which mobile devices don't have.
+			filter: brightness(50%);
+			&:hover {
+				filter: brightness(100%);
+			}
+		}
 	}
 }

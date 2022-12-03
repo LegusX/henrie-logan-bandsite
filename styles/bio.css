@@ -240,8 +240,9 @@ h3 {
 }
 .gallery__container {
   display: flex;
-  flex-flow: row wrap;
-  flex: 0 1 32%;
+  flex-wrap: wrap;
+  flex: 0 1 30%;
+  justify-content: space-between;
 }
 .gallery__img {
   padding-bottom: 1rem;
@@ -250,5 +251,16 @@ h3 {
 @media only screen and (min-width: 768px) {
   .gallery__img {
     padding-bottom: 2.25rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .gallery__img {
+    padding-bottom: 0;
+    width: 32%;
+    margin-bottom: 2%;
+    filter: brightness(50%);
+  }
+  .gallery__img:hover {
+    filter: brightness(100%);
   }
 }/*# sourceMappingURL=bio.css.map */
