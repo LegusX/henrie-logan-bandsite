@@ -1,6 +1,23 @@
-@import "partials/global";
+@use "partials/global";
+@use "partials/mixins" as *;
+@use "partials/variables" as *;
 
 //everything
+.hero {
+	background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
+	background-size: cover;
+	background-position: center;
+	aspect-ratio: 2/1.1;
+	width: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+
+	&__title {
+		@include margin;
+		font-weight: 600;
+	}
+}
 
 //tablets
 @media only screen and (min-width: 768px) {

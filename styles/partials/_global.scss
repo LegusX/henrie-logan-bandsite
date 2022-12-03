@@ -1,59 +1,53 @@
-@import "variables";
-
-@font-face {
-	font-family: Avenir;
-	src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
-	font-weight: 400;
-}
-@font-face {
-	font-family: Avenir;
-	src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
-	font-weight: 700;
-}
-@font-face {
-	font-family: Avenir;
-	src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
-	font-weight: 600;
-}
+@use "variables" as *;
+@use "mixins" as *;
+@use "fonts";
 
 //everything
+main,
+.footer__container {
+	@include margin;
+}
+
 .header {
 	background-color: $black;
-	color: white !important;
+	color: white;
 	text-align: center;
 	padding-top: 24px;
-}
 
-.header__logo {
-	height: 20px;
-	width: 120px;
-	margin: 0 32px;
-}
+	&__logo {
+		height: 20px;
+		width: 120px;
+		margin-right: 32px;
+	}
 
-.header__links {
-	display: flex;
-	align-items: baseline;
-	justify-content: center;
-}
+	&__links {
+		display: flex;
+		align-items: baseline;
+		justify-content: center;
+	}
 
-.header__link {
-	flex-grow: 1;
-	box-sizing: border-box;
-	color: $mercury;
-}
+	&__link {
+		flex-grow: 1;
+		box-sizing: border-box;
+		color: $mercury;
 
-.header__link--active {
-	color: white;
-	border-bottom: 4px solid white;
-	font-weight: bold;
-}
+		&--active {
+			color: white;
+			border-bottom: 4px solid white;
+			font-weight: 700;
+		}
 
-.header__link:hover {
-	border-bottom: 4px solid white;
+		&:hover {
+			border-bottom: 4px solid white;
+		}
+	}
 }
 
 //tablets
 @media only screen and (min-width: 768px) {
+	nav {
+		@include margin;
+	}
 	.header {
 		padding-top: 0;
 	}
@@ -77,7 +71,8 @@
 
 html,
 body,
-ul {
+ul,
+h1 {
 	font-family: Avenir;
 	margin: 0;
 	padding: 0;
@@ -94,47 +89,4 @@ ul {
 
 body {
 	color: $black;
-}
-
-// Font sizing stuff
-h1,
-h2 {
-	font-size: 24px;
-	line-height: 32px;
-	font-weight: 700;
-}
-
-h3 {
-	font-size: 14px;
-	line-height: 22px;
-	font-weight: 600;
-}
-
-p {
-	font-size: 13px;
-	line-height: 18px;
-	font-weight: 400;
-}
-
-@media only screen and (min-width: 768px) {
-	h1 {
-		font-size: 60px;
-		line-height: 68px;
-		font-weight: 700;
-	}
-	h2 {
-		font-size: 36px;
-		line-height: 44px;
-		font-weight: 700;
-	}
-	h3 {
-		font-size: 24px;
-		line-height: 32px;
-		font-weight: 600;
-	}
-	p {
-		font-size: 14px;
-		line-height: 22px;
-		font-weight: 400;
-	}
 }
