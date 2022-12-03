@@ -14,6 +14,10 @@ main,
 	text-align: center;
 	padding-top: 24px;
 
+	@include tablet {
+		padding-top: 0;
+	}
+
 	&__logo {
 		height: 20px;
 		width: 120px;
@@ -24,6 +28,10 @@ main,
 		display: flex;
 		align-items: baseline;
 		justify-content: center;
+
+		@include tablet {
+			width: fit-content;
+		}
 	}
 
 	&__link {
@@ -31,10 +39,16 @@ main,
 		box-sizing: border-box;
 		color: $mercury;
 
+		@include tablet {
+			flex-grow: 0;
+			margin: 0 24px;
+			padding: 8px 0;
+		}
+
 		&--active {
 			color: white;
 			border-bottom: 4px solid white;
-			font-weight: 700;
+			font-weight: 500;
 		}
 
 		&:hover {
@@ -43,30 +57,12 @@ main,
 	}
 }
 
-//tablets
-@media only screen and (min-width: 768px) {
-	nav {
+nav {
+	@include tablet {
 		@include margin;
-	}
-	.header {
-		padding-top: 0;
-	}
-	nav {
 		display: flex;
 		align-items: center;
 	}
-	.header__links {
-		width: fit-content;
-	}
-	.header__link {
-		flex-grow: 0;
-		margin: 0 24px;
-		padding: 8px 0;
-	}
-}
-
-//desktops
-@media only screen and (min-width: 1280px) {
 }
 
 html,

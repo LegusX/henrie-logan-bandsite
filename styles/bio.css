@@ -13,21 +13,26 @@
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
   font-weight: 600;
 }
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Medium.otf);
+  font-weight: 500;
+}
 h1,
 h2 {
-  font-size: 24px;
+  font-size: 2rem;
   line-height: 32px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 22px;
   font-weight: 600;
 }
 
 p {
-  font-size: 13px;
+  font-size: 0.9rem;
   line-height: 18px;
 }
 
@@ -77,6 +82,11 @@ main,
   text-align: center;
   padding-top: 24px;
 }
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+  }
+}
 .header__logo {
   height: 20px;
   width: 120px;
@@ -87,15 +97,29 @@ main,
   align-items: baseline;
   justify-content: center;
 }
+@media only screen and (min-width: 768px) {
+  .header__links {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .header__link {
   flex-grow: 1;
   box-sizing: border-box;
   color: #e1e1e1;
 }
+@media only screen and (min-width: 768px) {
+  .header__link {
+    flex-grow: 0;
+    margin: 0 24px;
+    padding: 8px 0;
+  }
+}
 .header__link--active {
   color: white;
   border-bottom: 4px solid white;
-  font-weight: 700;
+  font-weight: 500;
 }
 .header__link:hover {
   border-bottom: 4px solid white;
@@ -104,6 +128,8 @@ main,
 @media only screen and (min-width: 768px) {
   nav {
     margin: 0 16px;
+    display: flex;
+    align-items: center;
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 768px) {
@@ -117,31 +143,7 @@ main,
     width: 1020px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .header {
-    padding-top: 0;
-  }
-}
-@media only screen and (min-width: 768px) {
-  nav {
-    display: flex;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .header__links {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .header__link {
-    flex-grow: 0;
-    margin: 0 24px;
-    padding: 8px 0;
-  }
-}
+
 html,
 body,
 ul,
@@ -168,7 +170,7 @@ body {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  aspect-ratio: 2/1.1;
+  aspect-ratio: 2/1.3;
   width: 100%;
   color: white;
   display: flex;
@@ -188,4 +190,8 @@ body {
     margin: 0 auto;
     width: 1020px;
   }
+}
+
+.about__img {
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */
