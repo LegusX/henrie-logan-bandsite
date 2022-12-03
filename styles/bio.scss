@@ -20,7 +20,39 @@
 }
 
 .about {
+	&__container {
+		@include tablet {
+			padding: 0 3rem;
+		}
+
+		@include desktop {
+			padding: 0 5rem;
+		}
+	}
+
+	&__title {
+		@include headline;
+	}
+
 	&__img {
+		@include comp;
+		width: 100%;
+	}
+}
+
+.gallery {
+	&__title {
+		@include headline;
+	}
+
+	&__container {
+		display: flex;
+		flex-flow: row wrap;
+		flex: 0 1 32%;
+	}
+
+	&__img {
+		@include comp;
 		width: 100%;
 	}
 }

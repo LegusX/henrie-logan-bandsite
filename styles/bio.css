@@ -43,17 +43,17 @@ p {
     font-weight: 700;
   }
   h2 {
-    font-size: 36px;
+    font-size: 2.2rem;
     line-height: 44px;
     font-weight: 700;
   }
   h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 32px;
     font-weight: 600;
   }
   p {
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 22px;
     font-weight: 400;
   }
@@ -146,8 +146,7 @@ main,
 
 html,
 body,
-ul,
-h1 {
+ul {
   font-family: Avenir;
   margin: 0;
   padding: 0;
@@ -164,6 +163,13 @@ ul {
 
 body {
   color: #323232;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
 }
 
 .hero {
@@ -192,6 +198,57 @@ body {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .about__container {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .about__container {
+    padding: 0 5rem;
+  }
+}
+.about__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .about__title {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
 .about__img {
+  padding-bottom: 1rem;
   width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .about__img {
+    padding-bottom: 2.25rem;
+  }
+}
+
+.gallery__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .gallery__title {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
+.gallery__container {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 32%;
+}
+.gallery__img {
+  padding-bottom: 1rem;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .gallery__img {
+    padding-bottom: 2.25rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
