@@ -48,6 +48,10 @@
 		&:hover {
 			border-bottom: 4px solid white;
 		}
+
+		& > a > p {
+			margin: revert;
+		}
 	}
 }
 
@@ -73,6 +77,22 @@ nav {
 		width: fit-content;
 	}
 
+	&__top {
+		&::before {
+			@include tablet {
+				// @include headline;
+				content: "";
+				background-image: url(../../assets/logos/Logo-bandsite.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 120px;
+				aspect-ratio: 6;
+				float: right;
+				transform: translateY(50%);
+			}
+		}
+	}
+
 	&__icons {
 		display: flex;
 		justify-content: left;
@@ -84,8 +104,19 @@ nav {
 		height: 2rem;
 	}
 
-	&__name {
+	&__contacts {
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__contact {
 		@include comp;
+	}
+
+	&__name {
+		@include headline;
 
 		& > p {
 			font-weight: 600;
@@ -98,6 +129,14 @@ nav {
 
 		& > p {
 			margin: 0;
+		}
+	}
+
+	&__logo {
+		margin-top: 4rem;
+		margin-bottom: 1rem;
+		@include tablet {
+			display: none;
 		}
 	}
 }
