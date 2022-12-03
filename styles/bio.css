@@ -58,26 +58,6 @@ p {
     font-weight: 400;
   }
 }
-.footer {
-  background-color: #323232;
-  color: #e1e1e1;
-  overflow: auto;
-}
-.footer__container {
-  margin: 0 16px;
-}
-@media only screen and (min-width: 768px) {
-  .footer__container {
-    margin: 0 36px;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .footer__container {
-    margin: 0 auto;
-    width: 1020px;
-  }
-}
-
 .header {
   background-color: #323232;
   color: white;
@@ -146,6 +126,76 @@ p {
   }
 }
 
+.footer {
+  background-color: #323232;
+  color: #e1e1e1;
+  overflow: auto;
+}
+.footer__container {
+  margin: 0 16px;
+}
+@media only screen and (min-width: 768px) {
+  .footer__container {
+    margin: 0 36px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer__container {
+    margin: 0 auto;
+    width: 1020px;
+  }
+}
+.footer__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (min-width: 768px) {
+  .footer__title {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
+.footer__icons {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+}
+.footer__icon {
+  padding-bottom: 1rem;
+  height: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__icon {
+    padding-bottom: 2.25rem;
+  }
+}
+.footer__name {
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__name {
+    padding-bottom: 2.25rem;
+  }
+}
+.footer__name > p {
+  font-weight: 600;
+  margin: 0;
+}
+.footer__info {
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__info {
+    padding-bottom: 2.25rem;
+  }
+}
+.footer__info > p {
+  margin: 0;
+}
+
 html,
 body,
 ul {
@@ -169,7 +219,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+p {
   padding: 0;
   margin: 0;
 }
@@ -264,6 +315,21 @@ h3 {
   .about__attribution {
     font-size: 1.2rem;
     line-height: 32px;
+  }
+}
+.about__bio > p {
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .about__bio > p {
+    padding-bottom: 2.25rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about__bio {
+    display: flex;
+    flex: 0 1;
+    justify-content: space-between;
   }
 }
 

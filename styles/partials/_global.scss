@@ -2,15 +2,6 @@
 @use "mixins" as *;
 @use "fonts";
 
-.footer {
-	background-color: $black;
-	color: $mercury;
-	overflow: auto;
-	&__container {
-		@include margin;
-	}
-}
-
 .header {
 	background-color: $black;
 	color: white;
@@ -68,6 +59,49 @@ nav {
 	}
 }
 
+.footer {
+	background-color: $black;
+	color: $mercury;
+	overflow: auto;
+
+	&__container {
+		@include margin;
+	}
+
+	&__title {
+		@include headline;
+		width: fit-content;
+	}
+
+	&__icons {
+		display: flex;
+		justify-content: left;
+		gap: 2rem;
+	}
+
+	&__icon {
+		@include comp;
+		height: 2rem;
+	}
+
+	&__name {
+		@include comp;
+
+		& > p {
+			font-weight: 600;
+			margin: 0;
+		}
+	}
+
+	&__info {
+		@include comp;
+
+		& > p {
+			margin: 0;
+		}
+	}
+}
+
 html,
 body,
 ul {
@@ -91,7 +125,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+p {
 	padding: 0;
 	margin: 0;
 }
