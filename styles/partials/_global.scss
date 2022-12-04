@@ -32,6 +32,7 @@
 		flex-grow: 1;
 		box-sizing: border-box;
 		color: $mercury;
+		border-bottom: 4px solid $black;
 
 		@include tablet {
 			flex-grow: 0;
@@ -41,17 +42,25 @@
 
 		&--active {
 			color: white;
-			border-bottom: 4px solid white;
-			font-weight: 500;
+			border-color: white;
+			font-weight: 600;
 		}
 
 		&:hover {
-			border-bottom: 4px solid white;
+			animation-name: header__link;
+			animation-duration: 0.25s;
+			animation-fill-mode: forwards;
 		}
 
 		& > a > p {
 			margin: revert;
 		}
+	}
+}
+
+@keyframes header__link {
+	to {
+		border-bottom: 4px solid white;
 	}
 }
 
@@ -100,11 +109,6 @@ nav {
 		gap: 2rem;
 	}
 
-	&__icon {
-		@include comp;
-		height: 2rem;
-	}
-
 	&__contacts {
 		@include tablet {
 			display: flex;
@@ -116,7 +120,6 @@ nav {
 			@include tablet {
 				content: "";
 				width: 120px;
-				aspect-ratio: 6;
 			}
 		}
 	}
@@ -149,11 +152,14 @@ nav {
 			display: none;
 		}
 	}
+
+	&__copyright {
+		@include comp;
+	}
 }
 
 html,
-body,
-ul {
+body {
 	font-family: Avenir;
 	margin: 0;
 	padding: 0;
@@ -166,6 +172,8 @@ a {
 
 ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 body {

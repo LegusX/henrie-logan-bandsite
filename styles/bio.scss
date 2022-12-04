@@ -7,7 +7,7 @@
 	background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
 	background-size: cover;
 	background-position: center;
-	aspect-ratio: 2.5/1;
+	aspect-ratio: 1.6;
 	width: 100%;
 	color: white;
 	display: flex;
@@ -16,6 +16,10 @@
 	&__title {
 		@include margin;
 		font-weight: 600;
+	}
+
+	@include desktop {
+		aspect-ratio: 2;
 	}
 }
 
@@ -41,6 +45,7 @@
 	}
 
 	&__quote {
+		@include comp;
 		padding-top: none;
 		font-size: 1rem;
 		line-height: 22px;
@@ -49,6 +54,10 @@
 		@include tablet {
 			font-size: 1.5rem;
 			line-height: 32px;
+		}
+
+		@include desktop {
+			max-width: 80%;
 		}
 	}
 
@@ -65,10 +74,12 @@
 	&__bio {
 		& > p {
 			@include comp;
+			flex: 0 1 46%;
 		}
 		@include tablet {
 			display: flex;
 			flex: 0 1;
+			flex-basis: 45%;
 			justify-content: space-between;
 		}
 	}
@@ -77,10 +88,11 @@
 .gallery {
 	background-color: $alabaster;
 	width: 100%;
+	overflow: hidden;
 
 	&__title {
-		@include headline;
 		@include margin;
+		@include headline;
 	}
 
 	&__container {
@@ -102,10 +114,11 @@
 			width: 32%;
 			margin-bottom: 2%;
 
-			//Only apply brightness animation on tablet+ because hover doesn't work without a cursor of some sort, which mobile devices don't have.
-			filter: brightness(50%);
+			//Only apply grayscale animation on tablet+ because hover doesn't work without a cursor of some sort, which mobile devices don't have.
+			filter: grayscale(1);
+			transition: filter 0.25s ease-out;
 			&:hover {
-				filter: brightness(100%);
+				filter: grayscale(0);
 			}
 		}
 	}
