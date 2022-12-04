@@ -198,13 +198,19 @@ p {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2vw;
+    margin-bottom: 0 !important;
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 768px) {
   .footer__top {
     margin-top: 3rem;
     margin-bottom: 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer__top {
+    gap: 3rem;
   }
 }
 .footer__icons {
@@ -215,6 +221,11 @@ p {
 @media only screen and (min-width: 768px) {
   .footer__contacts {
     display: flex;
+    gap: 2vw;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer__contacts {
     gap: 3rem;
   }
 }

@@ -109,6 +109,10 @@ nav {
 			@include headline;
 			display: flex;
 			align-items: center;
+			gap: 2vw;
+			margin-bottom: 0 !important;
+		}
+		@include desktop {
 			gap: 3rem;
 		}
 	}
@@ -122,6 +126,9 @@ nav {
 	&__contacts {
 		@include tablet {
 			display: flex;
+			gap: 2vw;
+		}
+		@include desktop {
 			gap: 3rem;
 		}
 	}
