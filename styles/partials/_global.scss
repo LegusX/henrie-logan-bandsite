@@ -89,7 +89,6 @@ nav {
 	&__top {
 		&::before {
 			@include tablet {
-				// @include headline;
 				content: "";
 				background-image: url(../../assets/logos/Logo-bandsite.svg);
 				background-size: auto;
