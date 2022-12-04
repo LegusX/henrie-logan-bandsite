@@ -1,0 +1,125 @@
+@use "partials/global";
+@use "partials/mixins" as *;
+@use "partials/variables" as *;
+
+//everything
+.hero {
+	background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
+	background-size: cover;
+	background-position: center;
+	aspect-ratio: 1.6;
+	width: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+
+	&__title {
+		@include margin;
+		font-weight: 600;
+	}
+
+	@include desktop {
+		aspect-ratio: 2;
+	}
+}
+
+.about {
+	@include margin;
+	&__container {
+		@include tablet {
+			padding: 0 3rem;
+		}
+
+		@include desktop {
+			padding: 0 5rem;
+		}
+	}
+
+	&__title {
+		@include headline;
+	}
+
+	&__img {
+		@include comp;
+		width: 100%;
+	}
+
+	&__quote {
+		@include comp;
+		padding-top: none;
+		font-size: 1rem;
+		line-height: 22px;
+		font-weight: 600;
+
+		@include tablet {
+			font-size: 1.5rem;
+			line-height: 32px;
+		}
+
+		@include desktop {
+			max-width: 80%;
+		}
+	}
+
+	&__attribution {
+		font-size: 1rem;
+		line-height: 22px;
+		font-weight: 600;
+
+		@include tablet {
+			font-size: 1.2rem;
+			line-height: 32px;
+		}
+	}
+	&__bio {
+		& > p {
+			@include comp;
+			flex: 0 1 46%;
+		}
+		@include tablet {
+			display: flex;
+			flex: 0 1;
+			flex-basis: 45%;
+			justify-content: space-between;
+		}
+	}
+}
+
+.gallery {
+	background-color: $alabaster;
+	width: 100%;
+	overflow: hidden;
+
+	&__title {
+		@include margin;
+		@include headline;
+	}
+
+	&__container {
+		@include margin;
+
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 1 30%;
+		justify-content: space-between;
+	}
+
+	&__img {
+		@include comp;
+
+		width: 100%;
+
+		@include tablet {
+			padding-bottom: 0;
+			width: 32%;
+			margin-bottom: 2%;
+
+			//Only apply grayscale animation on tablet+ because hover doesn't work without a cursor of some sort, which mobile devices don't have.
+			filter: grayscale(1);
+			transition: filter 0.25s ease-out;
+			&:hover {
+				filter: grayscale(0);
+			}
+		}
+	}
+}

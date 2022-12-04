@@ -1,2 +1,8 @@
 #Ignore scss map files
 *.css.map
+
+# Ignore requirements and mockup folder
+info2/
+
+# ignore the annoying apple files if they appear for some reason
+.DS_store
