@@ -160,6 +160,19 @@ p {
     width: 1020px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .footer__container::before {
+    content: "";
+    background-image: url(../../assets/logos/Logo-bandsite.svg);
+    background-size: auto;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    width: 120px;
+    aspect-ratio: 6;
+    float: right;
+    transform: translateY(50%);
+  }
+}
 .footer__title {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -174,16 +187,24 @@ p {
   }
 }
 @media only screen and (min-width: 768px) {
-  .footer__top::before {
-    content: "";
-    background-image: url(../../assets/logos/Logo-bandsite.svg);
-    background-size: auto;
-    background-position-y: top;
-    background-repeat: no-repeat;
-    width: 120px;
-    aspect-ratio: 6;
-    float: right;
-    transform: translateY(50%);
+  .footer__title {
+    margin: 0;
+    width: 13.8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__top {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 768px) {
+  .footer__top {
+    margin-top: 3rem;
+    margin-bottom: 2.25rem;
   }
 }
 .footer__icons {
@@ -194,17 +215,12 @@ p {
 @media only screen and (min-width: 768px) {
   .footer__contacts {
     display: flex;
-    justify-content: space-between;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .footer__contacts::after {
-    content: "";
-    width: 120px;
+    gap: 3rem;
   }
 }
 .footer__contact {
   padding-bottom: 1rem;
+  width: 13.8rem;
 }
 @media only screen and (min-width: 768px) {
   .footer__contact {
@@ -245,11 +261,11 @@ p {
     display: none;
   }
 }
-.footer__copyright {
+.footer__copyright, .footer__email {
   padding-bottom: 1rem;
 }
 @media only screen and (min-width: 768px) {
-  .footer__copyright {
+  .footer__copyright, .footer__email {
     padding-bottom: 2.25rem;
   }
 }
