@@ -79,14 +79,6 @@ nav {
 
 	&__container {
 		@include margin;
-	}
-
-	&__title {
-		@include headline;
-		width: fit-content;
-	}
-
-	&__top {
 		&::before {
 			@include tablet {
 				content: "";
@@ -102,6 +94,29 @@ nav {
 		}
 	}
 
+	&__title {
+		@include headline;
+		width: fit-content;
+
+		@include tablet {
+			margin: 0;
+			width: 13.8rem;
+		}
+	}
+
+	&__top {
+		@include tablet {
+			@include headline;
+			display: flex;
+			align-items: center;
+			gap: 2vw;
+			margin-bottom: 0 !important;
+		}
+		@include desktop {
+			gap: 3rem;
+		}
+	}
+
 	&__icons {
 		display: flex;
 		justify-content: left;
@@ -111,20 +126,16 @@ nav {
 	&__contacts {
 		@include tablet {
 			display: flex;
-			justify-content: space-between;
+			gap: 2vw;
 		}
-
-		//a bit of nonsense to ensure that the contacts are pushed to the left
-		&::after {
-			@include tablet {
-				content: "";
-				width: 120px;
-			}
+		@include desktop {
+			gap: 3rem;
 		}
 	}
 
 	&__contact {
 		@include comp;
+		width: 13.8rem;
 	}
 
 	&__name {
@@ -152,7 +163,8 @@ nav {
 		}
 	}
 
-	&__copyright {
+	&__copyright,
+	&__email {
 		@include comp;
 	}
 }
