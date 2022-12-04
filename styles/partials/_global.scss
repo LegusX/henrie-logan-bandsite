@@ -6,16 +6,16 @@
 	background-color: $black;
 	color: white;
 	text-align: center;
-	padding-top: 24px;
+	padding-top: 1.5rem;
 
 	@include tablet {
 		padding-top: 0;
 	}
 
 	&__logo {
-		height: 20px;
-		width: 120px;
-		margin-right: 32px;
+		height: 1.25rem;
+		width: 7.5rem;
+		margin-right: 2rem;
 	}
 
 	&__links {
@@ -36,8 +36,8 @@
 
 		@include tablet {
 			flex-grow: 0;
-			margin: 0 24px;
-			padding: 8px 0;
+			margin: 0 1.5rem;
+			padding: 0.5rem 0;
 		}
 
 		&--active {
@@ -86,7 +86,7 @@ nav {
 				background-size: auto;
 				background-position-y: top;
 				background-repeat: no-repeat;
-				width: 120px;
+				width: 7.5rem;
 				aspect-ratio: 6;
 				float: right;
 				transform: translateY(50%);

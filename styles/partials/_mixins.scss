@@ -11,15 +11,15 @@
 }
 
 @mixin margin {
-	margin: 0 16px;
+	margin: 0 1rem;
 
 	@include tablet {
-		margin: 0 36px;
+		margin: 0 2.25rem;
 	}
 
 	@include desktop {
 		margin: 0 auto;
-		width: 1020px;
+		width: 64rem;
 	}
 }
 

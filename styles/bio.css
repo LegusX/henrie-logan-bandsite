@@ -57,7 +57,7 @@ p {
   background-color: #323232;
   color: white;
   text-align: center;
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 @media only screen and (min-width: 768px) {
   .header {
@@ -65,9 +65,9 @@ p {
   }
 }
 .header__logo {
-  height: 20px;
-  width: 120px;
-  margin-right: 32px;
+  height: 1.25rem;
+  width: 7.5rem;
+  margin-right: 2rem;
 }
 .header__links {
   display: flex;
@@ -90,8 +90,8 @@ p {
 @media only screen and (min-width: 768px) {
   .header__link {
     flex-grow: 0;
-    margin: 0 24px;
-    padding: 8px 0;
+    margin: 0 1.5rem;
+    padding: 0.5rem 0;
   }
 }
 .header__link--active {
@@ -124,20 +124,20 @@ p {
 }
 @media only screen and (min-width: 768px) {
   nav {
-    margin: 0 16px;
+    margin: 0 1rem;
     display: flex;
     align-items: center;
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 768px) {
   nav {
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 1280px) {
   nav {
     margin: 0 auto;
-    width: 1020px;
+    width: 64rem;
   }
 }
 
@@ -147,17 +147,17 @@ p {
   overflow: hidden;
 }
 .footer__container {
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 @media only screen and (min-width: 768px) {
   .footer__container {
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .footer__container {
     margin: 0 auto;
-    width: 1020px;
+    width: 64rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -167,7 +167,7 @@ p {
     background-size: auto;
     background-position-y: top;
     background-repeat: no-repeat;
-    width: 120px;
+    width: 7.5rem;
     aspect-ratio: 6;
     float: right;
     transform: translateY(50%);
@@ -322,18 +322,18 @@ p {
   align-items: center;
 }
 .hero__title {
-  margin: 0 16px;
+  margin: 0 1rem;
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) {
   .hero__title {
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .hero__title {
     margin: 0 auto;
-    width: 1020px;
+    width: 64rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -343,17 +343,17 @@ p {
 }
 
 .about {
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 @media only screen and (min-width: 768px) {
   .about {
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .about {
     margin: 0 auto;
-    width: 1020px;
+    width: 64rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -389,7 +389,7 @@ p {
   padding-bottom: 1rem;
   padding-top: none;
   font-size: 1rem;
-  line-height: 22px;
+  line-height: 1.375rem;
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) {
@@ -400,7 +400,7 @@ p {
 @media only screen and (min-width: 768px) {
   .about__quote {
     font-size: 1.5rem;
-    line-height: 32px;
+    line-height: 2rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -410,13 +410,13 @@ p {
 }
 .about__attribution {
   font-size: 1rem;
-  line-height: 22px;
+  line-height: 1.375rem;
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) {
   .about__attribution {
     font-size: 1.2rem;
-    line-height: 32px;
+    line-height: 2rem;
   }
 }
 .about__bio > p {
@@ -443,19 +443,19 @@ p {
   overflow: hidden;
 }
 .gallery__title {
-  margin: 0 16px;
+  margin: 0 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .gallery__title {
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .gallery__title {
     margin: 0 auto;
-    width: 1020px;
+    width: 64rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -465,7 +465,7 @@ p {
   }
 }
 .gallery__container {
-  margin: 0 16px;
+  margin: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   flex: 0 1 30%;
@@ -473,13 +473,13 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .gallery__container {
-    margin: 0 36px;
+    margin: 0 2.25rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .gallery__container {
     margin: 0 auto;
-    width: 1020px;
+    width: 64rem;
   }
 }
 .gallery__img {
