@@ -1,0 +1,312 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+h1,
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 2.2rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+.header {
+  background-color: #323232;
+  color: white;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+  }
+}
+.header__logo {
+  height: 1.25rem;
+  width: 7.5rem;
+  margin-right: 2rem;
+}
+.header__links {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .header__links {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.header__link {
+  flex-grow: 1;
+  box-sizing: border-box;
+  color: #e1e1e1;
+  border-bottom: 4px solid #323232;
+}
+@media only screen and (min-width: 768px) {
+  .header__link {
+    flex-grow: 0;
+    margin: 0 1.5rem;
+    padding: 0.5rem 0;
+  }
+}
+.header__link--active {
+  color: white;
+  border-color: white;
+  font-weight: 600;
+}
+.header__link:hover {
+  -webkit-animation-name: header__link;
+          animation-name: header__link;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.header__link > a > p {
+  margin: revert;
+}
+
+@-webkit-keyframes header__link {
+  to {
+    border-bottom: 4px solid white;
+  }
+}
+
+@keyframes header__link {
+  to {
+    border-bottom: 4px solid white;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 768px) {
+  nav {
+    margin: 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1280px) {
+  nav {
+    margin: 0 auto;
+    width: 64rem;
+  }
+}
+
+.footer {
+  background-color: #323232;
+  color: #e1e1e1;
+  overflow: hidden;
+}
+.footer__container {
+  margin: 0 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__container {
+    margin: 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer__container {
+    margin: 0 auto;
+    width: 64rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__container::before {
+    content: "";
+    background-image: url(../../assets/logos/Logo-bandsite.svg);
+    background-size: auto;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    width: 7.5rem;
+    aspect-ratio: 6;
+    float: right;
+    transform: translateY(50%);
+  }
+}
+.footer__title {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (min-width: 768px) {
+  .footer__title {
+    margin-top: 3rem;
+    margin-bottom: 2.25rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__title {
+    margin: 0;
+    width: 13.8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__top {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 0 !important;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 768px) {
+  .footer__top {
+    margin-top: 3rem;
+    margin-bottom: 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer__top {
+    gap: 3rem;
+  }
+}
+.footer__icons {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__contacts {
+    display: flex;
+    gap: 2vw;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer__contacts {
+    gap: 3rem;
+  }
+}
+.footer__contact {
+  padding-bottom: 1rem;
+  width: 13.8rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__contact {
+    padding-bottom: 2.25rem;
+  }
+}
+.footer__name {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__name {
+    margin-top: 3rem;
+    margin-bottom: 2.25rem;
+  }
+}
+.footer__name > p {
+  font-weight: 600;
+  margin: 0;
+}
+.footer__info {
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__info {
+    padding-bottom: 2.25rem;
+  }
+}
+.footer__info > p {
+  margin: 0;
+}
+.footer__logo {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__logo {
+    display: none;
+  }
+}
+.footer__copyright, .footer__email {
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__copyright, .footer__email {
+    padding-bottom: 2.25rem;
+  }
+}
+
+html,
+body {
+  font-family: Avenir;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #323232;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}/*# sourceMappingURL=shows.css.map */
