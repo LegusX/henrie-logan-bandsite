@@ -309,4 +309,11 @@ h3,
 p {
   padding: 0;
   margin: 0;
+}
+
+hr {
+  border-width: 1px;
+  border-color: #e1e1e1;
+  border-style: solid;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=shows.css.map */

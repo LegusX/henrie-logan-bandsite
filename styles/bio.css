@@ -311,6 +311,13 @@ p {
   margin: 0;
 }
 
+hr {
+  border-width: 1px;
+  border-color: #e1e1e1;
+  border-style: solid;
+  margin-bottom: 1rem;
+}
+
 .hero {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
   background-size: cover;
@@ -502,4 +509,92 @@ p {
   .gallery__img:hover {
     filter: grayscale(0);
   }
+}
+
+.comments {
+  width: 100%;
+  overflow: hidden;
+}
+.comments__title {
+  margin: 0 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .comments__title {
+    margin: 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__title {
+    margin: 0 auto;
+    width: 64rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comments__title {
+    margin-top: 3rem;
+    margin-bottom: 2.25rem;
+  }
+}
+.comments__add {
+  margin: 0 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .comments__add {
+    margin: 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__add {
+    margin: 0 auto;
+    width: 64rem;
+  }
+}
+.comments__list {
+  margin: 0 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .comments__list {
+    margin: 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__list {
+    margin: 0 auto;
+    width: 64rem;
+  }
+}
+
+.comment {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.comment__img {
+  min-width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  transform: translateY(-10%);
+}
+@media only screen and (min-width: 768px) {
+  .comment__img {
+    min-width: 3rem;
+    height: 3rem;
+  }
+}
+.comment__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.comment__name {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.comment__time {
+  color: #afafaf;
 }/*# sourceMappingURL=bio.css.map */
