@@ -150,19 +150,15 @@
 		gap:16px;
 	}
 
-	&__list {
-		// @include margin;
-
-	}
-
 	&__img {
 		flex: 0 0 36px;
 		width:2.25rem;
 		height:2.25rem;
 		border-radius:50%;
+		margin-top:1.5rem;
 
 		background-image: url(../assets/images/Mohan-muruge.jpg);
-		background-size:contain;
+		background-size:cover;
 
 
 		@include tablet {
@@ -185,9 +181,14 @@
 		margin-top:0.25rem;
 		margin-bottom:1rem;
 		width:100%;
+		max-width:100%;
 
 		@include tablet {
 			padding:1rem;
+		}
+
+		&--error {
+			border-color:$error;
 		}
 	}
 	&__label {
@@ -240,7 +241,7 @@
 	display:flex;
 	gap:16px;
 	margin-bottom:16px;
-
+	width:100%;
 	&__img {
 		min-width:2.25rem;
 		height:2.25rem;
@@ -268,5 +269,9 @@
 
 	&__time {
 		color:$silver;
+	}
+
+	&__inner {
+		width:100%;
 	}
 }
