@@ -4,13 +4,18 @@
 
 .hero {
 	background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
-		url("../assets/images/hero-bio.jpg");
+		url("../assets/images/hero-shows.jpg");
 	background-size: cover;
 	background-position: center;
-	aspect-ratio: 1.5;
+
 	width: 100%;
 	color: white;
 	box-sizing: border-box;
+	padding: 2rem 0;
+
+	@include tablet {
+		aspect-ratio: 1.6;
+	}
 
 	&__inner {
 		@include margin;
@@ -65,5 +70,121 @@
 
 	@include desktop {
 		aspect-ratio: 2;
+	}
+}
+
+.shows {
+	@include margin;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__title {
+		@include margin;
+		@include headline;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+
+		border-bottom: $silver 1px solid;
+		padding-bottom: 1rem;
+
+		width: 100%;
+
+		@include tablet {
+			flex-wrap: nowrap;
+			padding-bottom: 2.25rem;
+		}
+
+		& > * {
+			@include comp;
+			flex-basis: 100%;
+
+			@include tablet {
+				padding: 0;
+				flex-basis: 20%;
+			}
+		}
+
+		& :nth-child(1) {
+			font-weight: 600;
+
+			& ::before {
+				@include before;
+				content: "Date";
+			}
+			@include tablet {
+				&::before {
+					display: none;
+				}
+			}
+		}
+		& :nth-child(2) {
+			& ::before {
+				@include before;
+				content: "Venue";
+			}
+			& > p {
+				font-weight: 400;
+			}
+			@include tablet {
+				& p::before {
+					display: none;
+				}
+			}
+		}
+		& :nth-child(3) {
+			& ::before {
+				@include before;
+				content: "Location";
+			}
+			& > p {
+				font-weight: 400;
+			}
+			@include tablet {
+				& p::before {
+					display: none;
+				}
+			}
+		}
+
+		& :nth-child(4) {
+			@include button;
+			padding: 0.5rem 1rem;
+			line-height: 10px;
+			margin: 0 !important;
+			box-sizing: border-box;
+
+			@include tablet {
+				padding: 1rem 2rem;
+			}
+		}
+	}
+
+	&__head {
+		@include headline;
+		display: none;
+
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+
+			width: 100%;
+
+			& > * {
+				flex-basis: 20%;
+			}
+		}
+		& > p {
+			text-transform: uppercase;
+			color: $silver;
+			font-weight: 400 !important;
+			font-size: 10px;
+			line-height: 20px;
+		}
 	}
 }
