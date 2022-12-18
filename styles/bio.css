@@ -511,9 +511,33 @@ hr {
   }
 }
 
-.comments {
-  width: 100%;
-  overflow: hidden;
+.comments__container {
+  margin: 0 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .comments__container {
+    margin: 0 2.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__container {
+    margin: 0 auto;
+    width: 64rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comments__container {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__container {
+    width: 40vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 }
 .comments__title {
   margin: 0 1rem;
@@ -538,36 +562,90 @@ hr {
   }
 }
 .comments__add {
-  margin: 0 1rem;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+.comments__img {
+  flex: 0 0 36px;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: contain;
 }
 @media only screen and (min-width: 768px) {
-  .comments__add {
-    margin: 0 2.25rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .comments__add {
-    margin: 0 auto;
-    width: 64rem;
-  }
-}
-.comments__list {
-  margin: 0 1rem;
-}
-@media only screen and (min-width: 768px) {
-  .comments__list {
-    margin: 0 2.25rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .comments__list {
-    margin: 0 auto;
-    width: 64rem;
+  .comments__img {
+    min-width: 3rem;
+    height: 3rem;
   }
 }
 
-.comment {
+.commentForm {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.commentForm__input {
+  padding-bottom: 1rem;
+  border: #e1e1e1 1px solid;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
   width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .commentForm__input {
+    padding-bottom: 2.25rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .commentForm__input {
+    padding: 1rem;
+  }
+}
+.commentForm__label {
+  color: #afafaf;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .commentForm__label {
+    font-size: 12px;
+  }
+}
+.commentForm__button {
+  color: white;
+  background-color: #323232;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 20px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .commentForm__button {
+    min-width: 9rem;
+    width: 0;
+    padding: 0 2rem;
+    float: right;
+    margin-bottom: 1rem;
+    font-size: 12px;
+  }
+}
+.commentForm__button:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+.comment {
   margin: 0 auto;
   display: flex;
   gap: 16px;

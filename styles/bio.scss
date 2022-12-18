@@ -125,27 +125,117 @@
 }
 
 .comments {
-	width:100%;
-	overflow:hidden;
-	
+
+	&__container {
+		@include margin;
+		@include tablet {
+			width:80%;
+			margin: 0 auto;
+			box-sizing:border-box;
+		}
+		@include desktop {
+			width: 40vw;
+			margin:0 auto;
+			box-sizing:border-box;
+		}
+	}
 	&__title {
 		@include margin;
 		@include headline;
 	}
 
 	&__add {
-		@include margin;
+		width:100%;
+		display:flex;
+		gap:16px;
 	}
 
 	&__list {
-		@include margin;
+		// @include margin;
 
 	}
 
+	&__img {
+		flex: 0 0 36px;
+		width:2.25rem;
+		height:2.25rem;
+		border-radius:50%;
+
+		background-image: url(../assets/images/Mohan-muruge.jpg);
+		background-size:contain;
+
+
+		@include tablet {
+			min-width:3rem;
+			height:3rem;
+		}
+	}
+}
+
+.commentForm {
+	flex: 1 1 auto;
+	min-width:0;
+	&__input {
+		@include comp;
+		border: $mercury 1px solid;
+		border-radius:0.25rem;
+
+		box-sizing: border-box;
+		padding:0.75rem;
+		margin-top:0.25rem;
+		margin-bottom:1rem;
+		width:100%;
+
+		@include tablet {
+			padding:1rem;
+		}
+	}
+	&__label {
+		color:$silver;
+		font-size:10px;
+		font-weight:700;
+		line-height:20px;
+		text-transform: uppercase;
+
+		display:block;
+
+		@include tablet {
+			font-size:12px;
+		}
+	}
+
+	&__button {
+		color:white;
+		background-color: $black;
+	
+		font-weight:700;
+		font-size:10px;
+		line-height:20px;
+
+		width:100%;
+		height:40px;
+		border:none;
+		border-radius:4px;
+
+		margin-bottom:1rem;
+
+		@include tablet {
+			min-width:9rem;
+			width:0;
+			padding:0 2rem;
+			float:right;
+			margin-bottom:1rem;
+			font-size:12px;
+		}
+
+		&:hover {
+			background-color:$darkblack;
+			cursor:pointer;
+		}
+	}
 }
 
 .comment {
-	width:100%;
 	margin: 0 auto;
 	display:flex;
 	gap:16px;
