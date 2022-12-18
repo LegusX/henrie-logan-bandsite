@@ -200,8 +200,12 @@ p {
 }
 
 hr {
-    border-width: 1px;
-	border-color:$mercury;
+	border-width: 1px;
+	border-color: $mercury;
 	border-style: solid;
-	margin-bottom:1rem;
+	margin-bottom: 1rem;
+
+	@include tablet {
+		margin-bottom: 2.25rem;
+	}
 }

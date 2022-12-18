@@ -317,6 +317,11 @@ hr {
   border-style: solid;
   margin-bottom: 1rem;
 }
+@media only screen and (min-width: 768px) {
+  hr {
+    margin-bottom: 2.25rem;
+  }
+}
 
 .hero {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("../assets/images/hero-bio.jpg");
