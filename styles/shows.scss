@@ -74,6 +74,7 @@
 }
 
 .shows {
+	@include comp;
 	@include margin;
 
 	display: flex;
