@@ -459,15 +459,23 @@ hr {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  box-sizing: border-box;
   border-bottom: #afafaf 1px solid;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  height: 100%;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .shows__row {
     flex-wrap: nowrap;
-    padding-bottom: 2.25rem;
+    padding: 2.25rem;
   }
+}
+.shows__row:hover {
+  background-color: #fafafa;
+}
+.shows__row--selected {
+  background-color: #e1e1e1;
 }
 .shows__row > * {
   padding-bottom: 1rem;
