@@ -16,12 +16,12 @@ var comments = [
     }
 ]
 
-window.onload = () => {
+window.onload = async () => {
     const name = document.getElementById("name");
     const text = document.getElementById("comment");
     const submit = document.getElementById("submit");
 
-    submit.addEventListener("click", (e) => {
+    submit.addEventListener("click", async (e) => {
         e.preventDefault();
 
         //form validation
@@ -45,12 +45,13 @@ window.onload = () => {
         text.classList.remove("commentForm__input--error");
         name.classList.remove("commentForm__input--error");
 
-        //create new comment object and reset
-        let comment = {
+        //create new comment object, post to server, and update comments list with the returned data
+        let data = {
             name: name.value,
-            text: text.value,
-            time: Date.now()
+            comment: text.value,
         };
+        let comment = await postComment(data)
+
         comments.unshift(comment);
 
         name.value = "";
@@ -60,6 +61,7 @@ window.onload = () => {
     })
 
     //Load existing comments
+    comments = await getComments()
     reloadComments();
 }
 
@@ -88,22 +90,45 @@ function displayComment(comment) {
     name.classList.add("comment__name")
     infoDiv.appendChild(name)
 
+    let timeDelete = document.createElement("div")
+    infoDiv.appendChild(timeDelete)
+    // 
+
+    let del = document.createElement("p")
+    del.innerText = "Delete"
+    del.classList.add("comment__delete")
+    timeDelete.appendChild(del)
+
+    del.addEventListener("click", async () => {
+        // TODO: Add confirmation dialog?
+        if (await deleteComment(comment.id)) {
+            commentDiv.parentElement.removeChild()
+        }
+
+    })
+
     let time = document.createElement("p")
-    time.innerText = (new Date(comment.time)).toLocaleDateString();
+    time.innerText = (new Date(comment.timestamp)).toLocaleDateString();
     time.classList.add("comment__time")
-    infoDiv.appendChild(time)
+    timeDelete.appendChild(time)
 
     let text = document.createElement("p")
-    text.innerText = comment.text;
+    text.innerText = comment.comment;
     textDiv.appendChild(text)
 
     //attach it to parent element and append hr after it
     let commentList = document.getElementById("comments")
     commentList.appendChild(commentDiv)
     commentList.appendChild(document.createElement("hr"))
+
+    // Add two event listeners, one to show the delete button, and the other to hide it when the mouse enters/exists the div
+    commentList.addEventListener("mouseenter", () => {
+
+    })
 }
 
 function reloadComments() {
+    comments.sort((a, b) => { return b.timestamp - a.timestamp })
     let div = document.getElementById("comments");
 
     //clear html and add new hr

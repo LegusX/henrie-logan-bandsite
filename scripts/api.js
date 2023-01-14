@@ -5,6 +5,9 @@ axios.defaults.params = {
     api_key: KEY
 }
 axios.defaults.baseURL = API
+axios.defaults.headers = {
+    "Content-Type": "application/json"
+}
 
 async function getComments() {
     let r = await axios.get("/comments")
@@ -21,7 +24,10 @@ async function getShowdates() {
 async function postComment(comment) {
     let r = await axios.post("/comments", comment)
     if (r.status === 200) return r.data
-    else console.error("Failed to post comment")
+    else {
+        console.error("Failed to post comment")
+        return false;
+    }
 }
 
 async function likeComment(id) {
