@@ -6,48 +6,38 @@ axios.defaults.params = {
 }
 axios.defaults.baseURL = API
 
-function getComments() {
-    axios.get("/comments")
-        .then((r) => {
-            if (r.status === 200) return r.data
-            else console.error("Failed to retrieve comments")
-        })
+async function getComments() {
+    let r = await axios.get("/comments")
+    if (r.status === 200) return r.data
+    else console.error("Failed to retrieve comments")
 }
 
-function getShowdates() {
-    axios.get("/showdates")
-        .then((r) => {
-            if (r.status === 200) return r.data
-            else console.error("Failed to retrieve showdates")
-        })
+async function getShowdates() {
+    let r = await axios.get("/showdates")
+    if (r.status === 200) return r.data
+    else console.error("Failed to retrieve show dates")
 }
 
-function postComment(comment) {
-    axios.post("/comments", comment)
-        .then((r) => {
-            if (r.status === 200) return r.data
-            else console.error("Failed to post comment")
-        })
+async function postComment(comment) {
+    let r = await axios.post("/comments", comment)
+    if (r.status === 200) return r.data
+    else console.error("Failed to post comment")
 }
 
-function likeComment(id) {
-    axios.put(`/comments/${id}/like`)
-        .then((r) => {
-            if (r.status === 200) return true
-            else {
-                console.error("Failed to like comment. Comment likely doesn't exist.")
-                return false
-            }
-        })
+async function likeComment(id) {
+    let r = await axios.put(`/comments/${id}/like`)
+    if (r.status === 200) return true
+    else {
+        console.error("Failed to like comment. Comment likely doesn't exist.")
+        return false
+    }
 }
 
-function deleteComment(id) {
-    axios.delete(`/comments/${id}`)
-        .then((r) => {
-            if (r.status === 200) return true
-            else {
-                console.error("Failed to delete comment. Comment likely doesn't exist.")
-                return false
-            }
-        })
+async function deleteComment(id) {
+    let r = await axios.delete(`/comments/${id}`)
+    if (r.status === 200) return true
+    else {
+        console.error("Failed to like delete comment. Comment likely doesn't exist.")
+        return false
+    }
 }
