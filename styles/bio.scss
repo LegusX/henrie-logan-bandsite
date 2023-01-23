@@ -216,6 +216,7 @@
 	gap: 16px;
 	margin-bottom: 16px;
 	width: 100%;
+	min-height: 5rem;
 	&__img {
 		min-width: 2.25rem;
 		height: 2.25rem;
@@ -227,6 +228,23 @@
 		@include tablet {
 			min-width: 3rem;
 			height: 3rem;
+		}
+	}
+
+	&__like {
+		transform: translateY(200%);
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__like-button {
+		transform: translateY(-20%);
+		&:hover {
+			cursor: pointer;
+		}
+
+		@include tablet {
+			transform: translateY(-15%);
 		}
 	}
 
@@ -243,9 +261,27 @@
 
 	&__time {
 		color: $silver;
+		display: inline-block;
+		width: 6rem;
+		text-align: right;
 	}
 
 	&__inner {
 		width: 100%;
+	}
+	&__delete {
+		display: inline-block;
+		cursor: pointer;
+		aspect-ratio: 1;
+		width: 18px;
+		transform: translateY(15%);
+
+		&:hover {
+			content: url("../assets/icons/SVG/delete-bin-7-fill.svg");
+		}
+
+		@include tablet {
+			transform: translateY(10%);
+		}
 	}
 }

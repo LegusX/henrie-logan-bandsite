@@ -662,6 +662,7 @@ hr {
   gap: 16px;
   margin-bottom: 16px;
   width: 100%;
+  min-height: 5rem;
 }
 .comment__img {
   min-width: 2.25rem;
@@ -676,6 +677,22 @@ hr {
     height: 3rem;
   }
 }
+.comment__like {
+  transform: translateY(200%);
+  display: flex;
+  justify-content: space-around;
+}
+.comment__like-button {
+  transform: translateY(-20%);
+}
+.comment__like-button:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .comment__like-button {
+    transform: translateY(-15%);
+  }
+}
 .comment__info {
   display: flex;
   justify-content: space-between;
@@ -687,7 +704,25 @@ hr {
 }
 .comment__time {
   color: #afafaf;
+  display: inline-block;
+  width: 6rem;
+  text-align: right;
 }
 .comment__inner {
   width: 100%;
+}
+.comment__delete {
+  display: inline-block;
+  cursor: pointer;
+  aspect-ratio: 1;
+  width: 18px;
+  transform: translateY(15%);
+}
+.comment__delete:hover {
+  content: url("../assets/icons/SVG/delete-bin-7-fill.svg");
+}
+@media only screen and (min-width: 768px) {
+  .comment__delete {
+    transform: translateY(10%);
+  }
 }/*# sourceMappingURL=bio.css.map */
