@@ -11,7 +11,6 @@ window.onload = async () => {
 			loc: show.location,
 		};
 	});
-	console.log(shows);
 	renderShows();
 };
 
