@@ -62,6 +62,12 @@ window.onload = async () => {
 	//Load existing comments
 	comments = await getComments();
 	reloadComments();
+
+	//And just for the fun of it, we'll check for new comments every 60 seconds
+	setInterval(async () => {
+		comments = await getComments();
+		reloadComments();
+	}, 1000 * 60);
 };
 
 function displayComment(comment) {
