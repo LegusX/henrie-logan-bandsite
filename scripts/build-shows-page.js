@@ -1,37 +1,19 @@
-var shows = [
-	{
-		date: "Mon Sept 06 2021",
-		venue: "Ronald Lane",
-		loc: "San Francisco, CA",
-	},
-	{
-		date: "Tue Sept 21 2021",
-		venue: "Pier 3 East",
-		loc: "San Francisco, CA ",
-	},
-	{
-		date: "Fri Oct 15 2021 ",
-		venue: "View Lounge ",
-		loc: "San Francisco, CA ",
-	},
-	{
-		date: "Sat Nov 06 2021",
-		venue: "Hyatt Agency ",
-		loc: "San Francisco, CA ",
-	},
-	{
-		date: "Fri Nov 26 2021",
-		venue: "Moscow Center",
-		loc: "San Francisco, CA ",
-	},
-	{
-		date: "Wed Dec 15 2021",
-		venue: "Press Club",
-		loc: "San Francisco, CA ",
-	},
-];
+var shows = [];
 
-window.onload = renderShows;
+window.onload = async () => {
+	data = await getShowdates();
+
+	shows = data.map((show) => {
+		let date = new Date(show.date);
+		return {
+			date: date.toDateString(),
+			venue: show.place,
+			loc: show.location,
+		};
+	});
+	console.log(shows);
+	renderShows();
+};
 
 function renderShows() {
 	let showsDiv = document.getElementById("shows");
